@@ -19,23 +19,28 @@ Users can input text prompts to generate unique responses and explore the AI-dri
 1. Clone the repository to your local machine:
    ```bash
    git clone https://github.com/kaniyamudhan/KanIQ.git
-
+   ```
 2.Navigate to the project directory:
    ```bash
-    cd KanIQ
-3.Install dependencies:
-pip install -r requirements.txt
-Run both Streamlit applications (image and text input) in a single shell session:
+   cd KanIQ
+```
 
+
+
+3.Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+Run both Streamlit applications (image and text input) in a single shell session:
+```bash
 streamlit run image_text_input_app.py & streamlit run text_input_app.py
+```
 Contributing:
 Contributions are welcome! Feel free to fork the repository, make improvements, and submit pull requests.
 
 License:
 This project is licensed under the MIT License.
 
-arduino
-Copy code
 
-In this updated version, the "How to Run Locally" section includes a single command that runs both Streamlit applications (`image_text_input_app.py` and `text_input_app.py`) concurrently in the background using the `&` operator. This allows you to start both applications in the same shell session.
 
