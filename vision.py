@@ -4,14 +4,11 @@ import os
 import textwrap
 from PIL import Image
 import google.generativeai as genai
-
-
 load_dotenv()
 api_key = os.getenv("GOOGLE_API_KEY")
 if api_key is None:
     st.error("Error: API key not found. Please make sure to set the GOOGLE_API_KEY environment variable.")
     st.stop()
-
 genai.configure(api_key=api_key)
 def get_gemini_response(input, image):
     model = genai.GenerativeModel('gemini-pro-vision')
@@ -24,7 +21,6 @@ def get_gemini_response(input, image):
     except ValueError as e:
         st.error("Error: Failed to generate response. Please try again with a different input or try again later")
         return None
-
 #Streamlit app
 st.set_page_config(page_title="KanIQ 😉",page_icon="🤖")
 # st.sidebar.title("Sidebar")
@@ -32,14 +28,7 @@ st.set_page_config(page_title="KanIQ 😉",page_icon="🤖")
 st.header("KanIQ 😉")
 st.write("**Unlock the content within your images! Upload a photo and let KanIQ craft a creative narrative.**")  # Added description
 
-# Input box
-# ... (your existing code)
-
-# Example
- # Replace with a placeholder image and set width
-
-
-# Input box 
+#input box
 input_prompt = st.text_input("Input Prompt:", key="input")
 
 # File uploader
